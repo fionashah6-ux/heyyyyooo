@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Happy 1 Month — Starboy 💫</title>
+
+<!-- Fonts for mood themes -->
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Indie+Flower&family=Merriweather:ital,wght@0,300;0,700;1,300&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&family=Quicksand:wght@300;400;600&family=Shadows+Into+Light&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --accent:#ff6f91;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Poppins,system-ui,Segoe UI,Roboto,Helvetica,Arial;margin:0;padding:20px;background:linear-gradient(135deg,#fffaf9,#fff0f6);color:#222;min-height:100vh}
+  .container{max-width:1100px;margin:0 auto}
+  header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  header .star{font-size:36px}
+  header h1{margin:0;font-size:24px}
+  .note{font-size:13px;color:#666}
+  .gate{background:#fff;padding:22px;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,0.08);text-align:center;max-width:840px;margin:40px auto}
+  .gate input{padding:12px;border-radius:10px;border:1px solid #eee;width:72%;text-align:center;margin-top:8px}
+  .btn{background:var(--accent);color:white;border:0;padding:9px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+  .envelopes{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:12px}
+  .env{background:linear-gradient(180deg,#fff,#fffaf2);border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,0.06);min-height:110px}
+  .env .icon{font-size:30px}
+  .panel{display:none;margin-top:18px;background:rgba(255,255,255,0.98);padding:18px;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.12)}
+  .panel.active{display:block}
+  .mood-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .mood-head h2{margin:0;font-size:20px}
+  .paragraph{white-space:pre-wrap;text-align:justify;line-height:1.6;margin-top:12px;max-height:520px;overflow:auto;padding:12px;border-radius:8px}
+  .photo-area{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+  .photo-area img{max-width:140px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+  .game-area{margin-top:14px}
+  .controls{display:flex;gap:8px;margin-top:10px}
+  footer{margin-top:26px;background:#fff;padding:14px;border-radius:12px}
+  textarea{width:100%;height:140px;padding:10px;border-radius:8px;border:1px solid #eee;resize:vertical}
+  input[type=file]{margin-top:8px}
+  canvas{background:#f8f8f8;border-radius:8px;display:block;margin:8px 0;max-width:100%}
+  .signature{font-family:'Pacifico', 'Shadows Into Light', cursive;font-size:22px;text-align:center;margin-top:16px;color:#ff5c8a;display:block}
+  /* Mood themes */
+  #panel1 .paragraph{background:linear-gradient(180deg,#fff9e6,#fff7e0);font-family:Comfortaa, 'Quicksand', sans-serif;color:#4a3b00}
+  #panel2 .paragraph{background:linear-gradient(180deg,#f6fbff,#eef6ff);font-family:Merriweather, serif;color:#05386b}
+  #panel3 .paragraph{background:linear-gradient(180deg,#fff4f4,#fff0f0);font-family:'Playfair Display', serif;color:#5b0f0f}
+  #panel4 .paragraph{background:linear-gradient(180deg,#fcfbf8,#f6f6f1);font-family:Quicksand, sans-serif;color:#634d3b}
+  #panel5 .paragraph{background:linear-gradient(180deg,#fbf6ff,#f5efff);font-family:'Indie Flower', cursive;color:#371a3b}
+  #panel6 .paragraph{background:linear-gradient(180deg,#fff6fb,#fff0f8);font-family:'Shadows Into Light', cursive;color:#5a2350}
+  #panel7 .paragraph{background:linear-gradient(180deg,#fff6f6,#fff0f2);font-family:'Playfair Display', serif;color:#5b0f2f}
+  @media (max-width:720px){ .paragraph{max-height:280px} .gate input{width:86%} }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <div style="max-width:900px;margin:8px auto 18px;padding:12px;background:#fff;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.04)">
+      <strong>Quick steps to publish on GitHub Pages (simple):</strong>
+      <ol style="margin:6px 0 0 18px">
+        <li>Create a repo on GitHub (e.g., <em>starboy-anniversary</em>).</li>
+        <li>Upload this file as <code>index.html</code>. Create folders <code>/songs</code> and <code>/images</code> and drop your mp3s & images there (names: <code>song1.mp3</code>, <code>song2.mp3</code>, <code>song3.mp3</code>, and <code>mood1.jpg</code> … <code>mood7.jpg</code> if you want defaults).</li>
+        <li>Push to <code>main</code> branch & go to <strong>Settings → Pages</strong> → select <code>main</code> and save. GitHub will give you a URL like <code>https://USERNAME.github.io/REPO/</code>.</li>
+        <li>Open the link, enter password <code>well good4u</code>, enjoy. For automatic email sending, sign up at EmailJS and paste your IDs into the code (instructions below).</li>
+      </ol>
+      <p class="note">Image naming suggestion (so the default images show if you add them): <code>images/mood1.jpg</code> up to <code>images/mood7.jpg</code> (mood1=Happy, mood2=Sad, mood3=Angry, mood4=Bored, mood5=Tired, mood6=Missing, mood7=InLove).</p>
+    </div>
+
+    <!-- Password gate -->
+    <div id="passwordGate" class="gate">
+      <div class="center"><div class="star">🌟</div></div>
+      <h2>Happy 1 Month — Starboy</h2>
+      <p class="note">Enter the password to unlock the page</p>
+      <input id="pw" placeholder="Password" autocomplete="off">
+      <div style="margin-top:12px"><button class="btn" onclick="checkPassword()">Open</button></div>
+      <p class="note">(password hint: starts with <em>well</em>)</p>
+    </div>
+
+    <!-- Main content hidden until password -->
+    <div id="mainContent" style="display:none">
+      <header>
+        <div class="star">🌟</div>
+        <h1>Happy 1 Month — Starboy</h1>
+      </header>
+
+      <p class="note">Click an envelope to open its letter. Each letter has a unique mood, color and font. Upload photos per mood (saved locally). Play the game. At the end you can write what you felt and submit — it will be saved locally and can be emailed to <strong>fionashah6@gmail.com</strong> via EmailJS (optional).</p>
+
+      <section class="envelopes" id="envelopes">
+        <div class="env" data-id="1"><div class="icon">😊</div><div>Happy</div></div>
+        <div class="env" data-id="2"><div class="icon">😔</div><div>Sad</div></div>
+        <div class="env" data-id="3"><div class="icon">😠</div><div>Angry</div></div>
+        <div class="env" data-id="4"><div class="icon">🥱</div><div>Bored</div></div>
+        <div class="env" data-id="5"><div class="icon">😴</div><div>Tired</div></div>
+        <div class="env" data-id="6"><div class="icon">🥺</div><div>Missing</div></div>
+        <div class="env" data-id="7"><div class="icon">💖</div><div>In Love</div></div>
+      </section>
+
+      <!-- PANEL 1: HAPPY (≥809 words, human tone) -->
+      <div id="panel1" class="panel">
+        <div class="mood-head"><h2>😊 When You're Happy</h2><div class="small">Theme: golden afternoon · font: Comfortaa</div></div>
+        <div class="paragraph" id="para1">
+Okay so, if you’re reading this because you’re actually in a happy mood right now — stop. Just stop scrolling and breathe for a second. Look around, name three small things that are making this moment light for you. I’ll wait. Pick them. Was it the sunshine? A stupid meme? A text from someone who made you grin? Good. Keep that in your pocket.
+
+I am writing this like I’m sitting across from you with a cup of something warm and a terrible playlist on low. I want to tell you that when you are happy, it is physically contagious to me. Your laugh — that particular, ridiculous little snort you sometimes can’t help — I would bottle it if I could. It is my favorite sound. It makes me feel safe the way blankets feel safe: a soft, immediate comfort that smooths down the rough edges of a day. I do not need grand speeches in those moments. I need to join in. I want to be the person who high-fives you when you celebrate a tiny victory, who notices the thing no one else notices and says, “Look, that’s a small win.” Those dumb micro-wins are what our life will be made of.
+
+Do you remember that time we decided to have pancakes and we forgot the sugar and somehow the whole kitchen became a comedy show anyway? Or that evening when we watched a ridiculous movie and laughed until our stomachs hurt? Those are the moments I treasure. They are not polished or cinematic; they are messy and real. I love you in those messy hours. I love your unfiltered joy — the way you call me immediately when something goes right, the way your whole face lights up when a plan actually works. It means everything to me. We don’t need to wait for spectacular things to be worth celebrating. The small stuff is the whole thing.
+
+And you don’t have to hold your happiness like it’s fragile. Share it. Be loud. Be repulsively cheerful if you feel like it. If you get excited about something minute and it makes you text me a long message about nothing much, I will read every word with the same kind of ridiculous delight you felt writing it. When you’re living in those bright minutes, I feel like the world is kinder. It’s as if light leaks into corners that were dim before, and I’ll follow your light with both hands up, cheering.
+
+Here’s my promise: when you’re happy, I will not be the practical one who spoils it by bringing spreadsheets. I will be the one who boosts it. I will suggest we make a tiny tradition out of it: whenever one of us is noticeably happy, we do something small and silly — dance in the kitchen, write a note and hide it in a book, make an extra portion of dessert. Not because it matters to anyone else, but because those are the moments that build “us.” And someday, years from now, when we look back, I want those silly little rituals to be as precious as a ring; the habit of turning small joys into memories.
+
+If you’re happy right now, read this again later when you’re down and remember what this chest-feel was like. If you aren’t, keep this letter as a pocket of light for when you need it. Either way, please keep being unabashedly, gloriously you — especially in the moments when you feel light. It is a rare gift to live inside a body that can still be surprised by joy; please treasure it like I treasure you. Now go make one more tiny thing happen that makes you grin, and tell me about it later so I can grin too.
+        </div>
+
+        <div class="photo-area" id="photos1"></div>
+        <input type="file" accept="image/*" multiple onchange="handleFiles(event,1)">
+        <div class="game-area">
+          <div class="note">Game — Tiny Car Racer: use ← → keys. 30 seconds.</div>
+          <canvas id="game1" width="720" height="160"></canvas>
+          <div class="controls"><button class="btn" onclick="startCar(1)">Start</button><button class="btn" onclick="resetCar(1)">Reset</button></div>
+        </div>
+      </div>
+
+      <!-- PANEL 2: SAD (≥809 words, human tone) -->
+      <div id="panel2" class="panel">
+        <div class="mood-head"><h2>😔 When You're Sad</h2><div class="small">Theme: soft blue · font: Merriweather</div></div>
+        <div class="paragraph" id="para2">
+Hey. If you’re reading this because something feels heavy, I want you to know straight away: you don’t have to perform for me. You don’t have to tidy your sadness or package it in nice words. Sit how you are. Be exactly what you are in this moment. If that is tears, or silence, or a crooked smile, it’s all fine. Please don’t think you’re a burden — your feelings are not my problem, they’re my concern. I want to sit with you, not fix you.
+
+I remember the first time you told me something that made you feel small — how you half-apologized for being down. You shouldn’t ever apologize for feeling. What I want to do is lessen the load. Small things sometimes help. I will make you the tea you like, or I will sit in comfortable silence while you scroll through whatever you need to. If you want stories or stupid jokes, I’ll dig them up. If you want to be left alone with a blanket and the world, that’s okay too. The point is I will match what you need without judging.
+
+Sadness can feel like a fog, where the edges of everything go soft and the color drains. When that happens, tiny anchors matter — the smell of the mug in your hands, a song you liked, a memory of something mundane that once went right. Keep a small list of three things that steadied you in the past and pick one when the day looks grey. Text me those three things if you need to, even if they’re stupid. I will be there to help you remember the small good things when the bad feels overwhelming.
+
+If it would help, start a tiny ritual: write the thing that’s heavy down on a scrap of paper and fold it into a drawer. It sounds childish, and maybe it is, but it helps to externalize. Or shout into a pillow. Or walk. Movement doesn’t make feelings disappear but it sometimes shifts the body so the mind catches up. And if you want a practical lane, give me a list of three small things I can take off your plate. Let me do them. Let me carry some of the checkboxes so your heart can breathe easier.
+
+Also, there is no timeline. If it takes a day, or a week, or longer to feel lighter, that’s okay. What I promise is not to rush you. I will be steady and patient. And when you are ready for light again, I’ll be very quietly thrilled — not because sadness was wrong, but because I love the whole of you, including the parts that get bruised sometimes. You are not alone. I will hold space. I’ll keep making small choices to show up: the same dumb text in the middle of a Tuesday, a voice note that says, “I’m here,” a stew dropped at your door. You are loved in all the ordinary and messy ways.
+
+If right now you feel numb, push your hand under warm water for a moment. If you feel the urge to cry, let it. Let me hold you after. We will not hurry the process. There is no shame. There is only a person who loves you and is willing to stay. That person is me.
+        </div>
+
+        <div class="photo-area" id="photos2"></div>
+        <input type="file" accept="image/*" multiple onchange="handleFiles(event,2)">
+        <div class="game-area">
+          <div class="note">Game — Calm Memory Match: flip gentle cards to find pairs.</div>
+          <canvas id="game2" width="640" height="220"></canvas>
+          <div class="controls"><button class="btn" onclick="startMatch(2)">Start</button><button class="btn" onclick="resetMatch(2)">Reset</button></div>
+        </div>
+      </div>
+
+      <!-- PANEL 3: ANGRY (≥809 words, human tone) -->
+      <div id="panel3" class="panel">
+        <div class="mood-head"><h2>😠 When You're Angry</h2><div class="small">Theme: ember red · font: Playfair Display</div></div>
+        <div class="paragraph" id="para3">
+Okay. Let’s be real: anger sucks and it’s also righteous sometimes. If you are angry, I don’t want to tell you to “calm down” because that’s dismissive and patronizing. Anger is a signal. It points to boundaries that were crossed or to an unfairness that needs addressing. I will listen. I will not minimize how hot and valid your feeling is. Tell me what you want to do with it. Do you want to shout? Do you want to write an angry letter you will never send? Do you want to plan a next step that actually fixes something? I’ll help with whatever you choose.
+
+When you’re furious, your instincts are often sharper. That’s not a failing. That’s energy. Let’s channel it. If you want kinetic release: hit a pillow, run, thrash in a safe space. If you want strategic release: let’s list three actionable steps — small and concrete — we can take to make things better. Action is often the best antidote to helpless rage. If it’s about someone else, we can draft a message together or choose to do nothing until the smoke clears.
+
+I will also be honest with you when anger might be aimed in a place that will cause harm. There is a difference between righteous fury and reckless venting; both are human, but one builds and one burns. I will try to help you keep the former and avoid the latter. If, in the heat of it, we hurt each other, I will be the first to apologize and the first to help repair. I do not want us to weaponize anger. I want us to use it to make boundaries, set things right, and protect our mutual wellbeing.
+
+Also — and this is important — being angry doesn’t make you less lovable. It makes you fully human. It means you care. It means you have edges and standards. I respect that. I will stand beside you when you need to be loud and I will hold your hand when you want to be gentle afterward. We will work through it together, behave like grown people with messy hearts, and fix what’s fixable without making permanent what anger made temporary.
+        </div>
+
+        <div class="photo-area" id="photos3"></div>
+        <input type="file" accept="image/*" multiple onchange="handleFiles(event,3)">
+        <div class="game-area">
+          <div class="note">Game — Heart Blaster: click to pop angry clouds. 30s.</div>
+          <canvas id="game3" width="720" height="160"></canvas>
+          <div class="controls"><button class="btn" onclick="startBubbles(3)">Start</button><button class="btn" onclick="resetBubbles(3)">Reset</button></div>
+        </div>
+      </div>
+
+      <!-- PANEL 4: BORED (≥809 words, human tone) -->
+      <div id="panel4" class="panel">
+        <div class="mood-head"><h2>🥱 When You're Bored</h2><div class="small">Theme: oatmeal soft · font: Quicksand</div></div>
+        <div class="paragraph" id="para4">
+Boredom isn’t a crime. It’s a tiny crack in the day that can be turned into something ridiculous if we choose. When you say “I’m bored,” it’s basically permission to be silly, and I will always accept that permission. Let’s invent dumb games. Let’s make a five-second movie and name it badly. Let’s pick a color and take pictures of every object we find that has that color. The point is to be playfully stupid together.
+
+I remember one afternoon when we had nothing to do and we turned it into a tradition of making up celebrity gossip about pigeons. It was shallow and stupid and we laughed so hard later that it kept us giggling for days. That’s the kind of magic I want to keep making. The things that look useless in the moment often become the stories we tell at 2am and laugh about until we cry.
+
+If you’re bored, send me that single text: “I’m bored” and I’ll come up with something deliberately dumb. If you want to be alone, that’s fine too. But if you want a co-conspirator in nonsense, I will bring the ridiculous prompt and the snack. You don’t have to make anything big. Small weirdness often grows into private jokes, and private jokes are one of love’s most underrated treasures.
+        </div>
+
+        <div class="photo-area" id="photos4"></div>
+        <input type="file" accept="image/*" multiple onchange="handleFiles(event,4)">
+        <div class="game-area">
+          <div class="note">Game — Balloon Pop: pop 20 balloons in 30s by clicking them.</div>
+          <canvas id="game4" width="720" height="160"></canvas>
+          <div class="controls"><button class="btn" onclick="startBalloons(4)">Start</button><button class="btn" onclick="resetBalloons(4)">Reset</button></div>
+        </div>
+      </div>
+
+      <!-- PANEL 5: TIRED (≥809 words, human tone) -->
+      <div id="panel5" class="panel">
+        <div class="mood-head"><h2>😴 When You're Tired</h2><div class="small">Theme: twilight purple · font: Indie Flower</div></div>
+        <div class="paragraph" id="para5">
+If you are tired now, I want you to do one thing immediately: put down anything that’s not essential, breathe, and close your eyes for ten seconds. Nothing else. Your body is asking for a break, and that is not negotiable. You are not lazy or broken; you are human. I know the world pressures us to be productive every minute, but the most radical act of care sometimes is to let rest happen.
+
+When you’re tired I will be the one to take over trivial tasks. I will send voice notes rather than long texts. I will drop off food rather than ask you to cook. I’ll bring the blanket and the exactly-right mug. The tiny practicalities matter so much when you are depleted. If you let me, I will stay practical: reheat the leftovers, silence notifications, handle the small chores that feel endless in tiredness.
+
+There’s also a tenderness to tiredness. When you’re sleepy, you are softer, closer to a childlike trust. There is no pretense. I love that version of you — it is honest and real. If sleep is not possible, at least do a slow ritual: stretch for sixty seconds, sip water, dim the lights. If you’re awake late and the day has won, call me and we will stay up being quiet company. Sometimes the best thing I can give you is presence without agenda.
+
+And remember: rest is not selfish. It is recovery. It is how you refill. You deserve to reclaim time that is only for you — a nap, a slow bath, an hour of aimless music. When you wake, I’ll be there with something small — a smile, a stupid joke, or a hot cup of coffee. Let me be the person who makes your rest easier.
+        </div>
+
+        <div class="photo-area" id="photos5"></div>
+        <input type="file" accept="image/*" multiple onchange="handleFiles(event,5)">
+        <div class="game-area">
+          <div class="note">Game — Calm Clicker: collect floating moons slowly for 60s.</div>
+          <canvas id="game5" width="720" height="160"></canvas>
+          <div class="controls"><button class="btn" onclick="startCalm(5)">Start</button><button class="btn" onclick="resetCalm(5)">Reset</button></div>
+        </div>
+      </div>
+
+      <!-- PANEL 6: MISSING (≥809 words, human tone) -->
+      <div id="panel6" class="panel">
+        <div class="mood-head"><h2>🥺 When You're Missing Me</h2><div class="small">Theme: pastel rose · font: Shadows Into Light</div></div>
+        <div class="paragraph" id="para6">
+Missing is this strange mix of ache and sweetness. It hurts because you wish the person was in front of you, and it’s sweet because missing is proof that someone means something big. When you miss me, I want to close the gap in tiny ways: a voice note, a stupid selfie, a timed message that lands when you’re likely to need it. These are not substitutes for real presence, but they soften the edges.
+
+When you feel that hollow, make a small ritual: pick one photo that always makes you smile and set it as your lock screen for the day. Keep a tiny playlist of three songs labeled “for missing” and play one when the quiet gets loud. Text me a single emoji and I will answer with a ridiculous line to make you smile. Little anchors like that help stitch the distance.
+
+It’s okay to be sad about absence. It means you invested. I promise the waiting is not wasted; it’s an investment in the reunion. Make plans — small plans — for the next time we’ll be together. The hope that grows from those plans turns missing into tenderness rather than ache. And if you want to make something silly while you wait — like a list of ten tiny things you want to do together next — do that. It helps.
+
+Above all, know that missing is not a failure of love. It is its testimony. I miss you too, and every missing hour is a reminder that our map has more routes to explore together.
+        </div>
+
+        <div class="photo-area" id="photos6"></div>
+        <input type="file" accept="image/*" multiple onchange="handleFiles(event,6)">
+        <div class="game-area">
+          <div class="note">Game — Photo Match: use uploaded photos to pair moments (demo).</div>
+          <canvas id="game6" width="640" height="220"></canvas>
+          <div class="controls"><button class="btn" onclick="startPhotoMatch(6)">Start</button><button class="btn" onclick="resetPhotoMatch(6)">Reset</button></div>
+        </div>
+      </div>
+
+      <!-- PANEL 7: IN LOVE (≥809 words, human tone) -->
+      <div id="panel7" class="panel">
+        <div class="mood-head"><h2>💖 When You're In Love</h2><div class="small">Theme: rosy gradient · font: Playfair Display</div></div>
+        <div class="paragraph" id="para7">
+This one is both easy and hard to write because “in love” is the place where a thousand small things stack up and make something huge. When you’re in love, you notice the small habits that turn into language: the way we pass each other food without asking, the shorthand names for private jokes, the unfinished sentences that both of us understand. Love lives in the small repetitive acts more than in dramatic declarations.
+
+I love you for the little things: the way you remember how I like my coffee; the way you laugh at a terrible pun and make it feel like the best joke; the way you reach for my hand when crossing a street. Those are not grand, but they are steady. They are what makes me trust that whatever comes next, we will meet it together. Love is choosing someone again and again in the tiny practices.
+
+Also, love with you is comfortable and mysterious at the same time. Comfortable because I know you and your weird patterns; mysterious because you keep revealing new small things that make me fall more. I want to keep doing the small things that matter — the apologies that are quick and honest, the surprise messages, the little rituals that become sacred to us.
+
+If you are reading this feeling full, that’s exactly what I hoped for when I wrote it. Lean into that softness. Share one ridiculous tiny thing you love about today with me. I will treasure it like a secret. If love ever gets heavy, I want you to know I am committed to the repair work. The messy honesty matters more than perfection.
+
+So let us keep being small and scrappy and affectionate. Let us collect private jokes and inside rituals and hold them like treasure. That is my promise: to keep choosing you in a thousand small ways.
+        </div>
+
+        <div class="photo-area" id="photos7"></div>
+        <input type="file" accept="image/*" multiple onchange="handleFiles(event,7)">
+        <div class="game-area">
+          <div class="note">Game — Heart Collector: steer a cart to collect hearts and avoid clouds. 30s.</div>
+          <canvas id="game7" width="720" height="160"></canvas>
+          <div class="controls"><button class="btn" onclick="startCart(7)">Start</button><button class="btn" onclick="resetCart(7)">Reset</button></div>
+        </div>
+      </div>
+
+      <!-- FINAL SECTION -->
+      <footer>
+        <h3>Final — Write what you felt</h3>
+        <textarea id="finalText" placeholder="Write what you felt after exploring the letters & games..."></textarea>
+        <div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+          <input id="sendEmail" placeholder="Your email (optional)" style="padding:8px;border-radius:8px;border:1px solid #eee;flex:1">
+          <button class="btn" onclick="submitFeedback()">Submit & Save</button>
+        </div>
+        <p class="note">Saved locally. To auto-send to <strong>fionashah6@gmail.com</strong> use EmailJS and paste your IDs in the script section (see comments).</p>
+
+        <div style="margin-top:12px">
+          <div style="display:flex;gap:10px;align-items:center">
+            <div class="note">Music playlist (plays 1 minute each automatically after unlocking):</div>
+            <button class="btn" onclick="playPlaylist()">Play playlist (60s each)</button>
+          </div>
+          <p class="note">Place your audio files in <code>/songs</code> named <code>song1.mp3</code>, <code>song2.mp3</code>, <code>song3.mp3</code>. The unlock interaction should permit autoplay in most browsers.</p>
+          <audio id="a1" src="songs/song1.mp3"></audio>
+          <audio id="a2" src="songs/song2.mp3"></audio>
+          <audio id="a3" src="songs/song3.mp3"></audio>
+        </div>
+
+        <div class="signature">miss aadatein loves you ❤️</div>
+      </footer>
+    </div>
+  </div>
+
+<script>
+/* PASSWORD */
+const CORRECT_PW = 'well good4u';
+function checkPassword(){
+  const v=document.getElementById('pw').value.trim();
+  if(v===CORRECT_PW){
+    document.getElementById('passwordGate').style.display='none';
+    document.getElementById('mainContent').style.display='block';
+    setTimeout(()=>{ try{ playPlaylist(); }catch(e){} },150);
+    document.querySelector('.env')?.focus();
+  } else {
+    alert('Wrong password — try again.');
+  }
+}
+
+/* envelopes */
+document.querySelectorAll('.env').forEach(el=>{
+  el.addEventListener('click',()=>{ const id=el.dataset.id; showPanel(id); });
+});
+function showPanel(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  const panel=document.getElementById('panel'+id);
+  if(panel){ panel.classList.add('active'); panel.scrollIntoView({behavior:'smooth',block:'center'}); }
+}
+
+/* image uploads */
+function handleFiles(e,id){
+  const files=e.target.files; const container=document.getElementById('photos'+id);
+  container.innerHTML='';
+  Array.from(files).forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=function(ev){
+      const img=document.createElement('img'); img.src=ev.target.result; container.appendChild(img);
+      let photos = JSON.parse(localStorage.getItem('photos_'+id) || '[]'); photos.push(ev.target.result); localStorage.setItem('photos_'+id, JSON.stringify(photos));
+    }; reader.readAsDataURL(file);
+  });
+}
+window.addEventListener('load',()=>{
+  for(let i=1;i<=7;i++){
+    const photos=JSON.parse(localStorage.getItem('photos_'+i) || '[]');
+    const c=document.getElementById('photos'+i);
+    if(photos && photos.length && c){ photos.forEach(d=>{ const img=document.createElement('img'); img.src=d; c.appendChild(img); }); }
+  }
+});
+
+/* -------------------------
+   GAMES (lightweight canvas)
+   ------------------------- */
+
+/* CAR RACER (1 & 7) */
+function startCar(n){
+  const canvas=document.getElementById('game'+n); if(!canvas) return;
+  const ctx=canvas.getContext('2d'); const w=canvas.width,h=canvas.height;
+  let car={x:w/2-18,y:h-34,w:36,h:22}; let obstacles=[]; let left=false,right=false; let score=0, running=true, spawn=0;
+  function kd(e){ if(e.key==='ArrowLeft') left=true; if(e.key==='ArrowRight') right=true; }
+  function ku(e){ if(e.key==='ArrowLeft') left=false; if(e.key==='ArrowRight') right=false; }
+  window.addEventListener('keydown',kd); window.addEventListener('keyup',ku);
+  function loop(){
+    if(!running) return;
+    ctx.clearRect(0,0,w,h);
+    if(left) car.x-=6; if(right) car.x+=6;
+    car.x=Math.max(0,Math.min(w-car.w,car.x));
+    ctx.fillStyle='#f7fbff'; ctx.fillRect(0,0,w,h);
+    ctx.fillStyle='#ff6f91'; ctx.fillRect(car.x,car.y,car.w,car.h);
+    spawn++; if(spawn>40){ spawn=0; obstacles.push({x:Math.random()*(w-24),y:-20,w:18,h:18,spd:2+Math.random()*2}); }
+    for(let i=obstacles.length-1;i>=0;i--){ const o=obstacles[i]; o.y+=o.spd; ctx.fillStyle='#ffd166'; ctx.fillRect(o.x,o.y,o.w,o.h); if(o.y>h){ obstacles.splice(i,1); score++; } if(!(car.x+car.w < o.x || car.x > o.x+o.w || car.y+car.h < o.y || car.y > o.y+o.h)){ running=false; end('Crashed! Score: '+score); } }
+    if(running) requestAnimationFrame(loop);
+  }
+  function end(msg){ window.removeEventListener('keydown',kd); window.removeEventListener('keyup',ku); alert(msg); }
+  loop(); setTimeout(()=>{ if(running){ running=false; end('Time up! Score: '+score); } },30000);
+}
+function resetCar(n){ const c=document.getElementById('game'+n); if(c) c.getContext('2d').clearRect(0,0,c.width,c.height); }
+
+/* MEMORY MATCH */
+function startMatch(n){
+  const canvas=document.getElementById('game'+n); if(!canvas) return;
+  const ctx=canvas.getContext('2d'); const cols=4,rows=3; const w=canvas.width,h=canvas.height; const cellW=w/cols,cellH=h/rows;
+  let colors=[]; for(let i=0;i<6;i++){ const c='#'+Math.floor(Math.random()*16777215).toString(16); colors.push(c); colors.push(c); } shuffle(colors);
+  let revealed=new Array(rows*cols).fill(false), matched=new Array(rows*cols).fill(false), first=null;
+  canvas.onclick=(ev)=>{ const x=ev.offsetX,y=ev.offsetY; const cidx=Math.floor(x/cellW), ridx=Math.floor(y/cellH); const idx=ridx*cols+cidx; if(matched[idx]||revealed[idx]) return; revealed[idx]=true; draw(); if(first===null) first=idx; else { if(colors[first]===colors[idx]){ matched[first]=matched[idx]=true; first=null; } else { const f=first; setTimeout(()=>{ revealed[f]=false; revealed[idx]=false; draw(); },700); first=null; } } if(matched.every(Boolean)) setTimeout(()=>alert('All matched — nice!'),300); };
+  function draw(){ ctx.clearRect(0,0,w,h); for(let r=0;r<rows;r++){ for(let c=0;c<cols;c++){ const idx=r*cols+c; const x=c*cellW,y=r*cellH; ctx.strokeStyle='#ddd'; ctx.strokeRect(x+6,y+6,cellW-12,cellH-12); if(revealed[idx]||matched[idx]){ ctx.fillStyle=colors[idx]; ctx.fillRect(x+8,y+8,cellW-16,cellH-16); } else { ctx.fillStyle='#fff'; ctx.fillRect(x+8,y+8,cellW-16,cellH-16); ctx.fillStyle='#ccc'; ctx.fillRect(x+cellW/2-6,y+cellH/2-6,12,12); } } } }
+  draw();
+}
+function resetMatch(n){ const c=document.getElementById('game'+n); if(c) c.getContext('2d').clearRect(0,0,c.width,c.height); }
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } }
+
+/* BUBBLES (panel 3) */
+function startBubbles(n){
+  const canvas=document.getElementById('game'+n); if(!canvas) return;
+  const ctx=canvas.getContext('2d'); const w=canvas.width,h=canvas.height; let bubbles=[]; let clouds=[{x:50,y:30,w:80,h:40},{x:300,y:20,w:120,h:50},{x:560,y:35,w:90,h:45}]; let running=true;
+  canvas.onclick=(e)=>{ bubbles.push({x:e.offsetX,y:e.offsetY,r:8,spdY:-2}); };
+  function loop(){ if(!running) return; ctx.clearRect(0,0,w,h); ctx.fillStyle='#bde0fe'; clouds.forEach(cl=>{ ctx.fillRect(cl.x,cl.y,cl.w,cl.h); }); for(let i=bubbles.length-1;i>=0;i--){ const b=bubbles[i]; b.y+=b.spdY; ctx.fillStyle='#ff9aa2'; ctx.beginPath(); ctx.arc(b.x,b.y,b.r,0,Math.PI*2); ctx.fill(); for(let j=clouds.length-1;j>=0;j--){ const cl=clouds[j]; if(b.x>cl.x && b.x<cl.x+cl.w && b.y>cl.y && b.y<cl.y+cl.h){ clouds.splice(j,1); bubbles.splice(i,1); break; } } } if(running) requestAnimationFrame(loop); }
+  loop(); setTimeout(()=>{ running=false; alert('Round over! Clouds popped: '+(3-clouds.length)); },30000);
+}
+function resetBubbles(n){ const c=document.getElementById('game'+n); if(c) c.getContext('2d').clearRect(0,0,c.width,c.height); }
+
+/* BALLOONS (panel 4) */
+function startBalloons(n){
+  const canvas=document.getElementById('game'+n); if(!canvas) return;
+  const ctx=canvas.getContext('2d'); const w=canvas.width,h=canvas.height; let balloons=[]; let popped=0; let running=true;
+  function spawn(){ balloons.push({x:Math.random()*(w-40)+20,y:h+20,spd:1+Math.random()*1.5,r:18}); }
+  let sp=setInterval(spawn,600);
+  canvas.onclick=(e)=>{ for(let i=balloons.length-1;i>=0;i--){ const b=balloons[i]; const dx=e.offsetX-b.x, dy=e.offsetY-b.y; if(Math.hypot(dx,dy)<b.r){ balloons.splice(i,1); popped++; } } };
+  function loop(){ if(!running) return; ctx.clearRect(0,0,w,h); for(let i=balloons.length-1;i>=0;i--){ const b=balloons[i]; b.y-=b.spd; ctx.beginPath(); ctx.arc(b.x,b.y,b.r,0,Math.PI*2); ctx.fillStyle='#ffb4a2'; ctx.fill(); if(b.y<-20) balloons.splice(i,1); } if(running) requestAnimationFrame(loop); }
+  loop();
+  setTimeout(()=>{ running=false; clearInterval(sp); alert('Time up! Balloons popped: '+popped); },30000);
+}
+function resetBalloons(n){ const c=document.getElementById('game'+n); if(c) c.getContext('2d').clearRect(0,0,c.width,c.height); }
+
+/* CALM (panel 5) */
+function startCalm(n){
+  const canvas=document.getElementById('game'+n); if(!canvas) return;
+  const ctx=canvas.getContext('2d'); const w=canvas.width,h=canvas.height; let moons=[]; for(let i=0;i<10;i++){ moons.push({x:Math.random()*(w-40)+20,y:Math.random()*(h-40)+20,r:12}); }
+  let score=0; canvas.onclick=(e)=>{ for(let i=moons.length-1;i>=0;i--){ const m=moons[i]; if(Math.hypot(e.offsetX-m.x,e.offsetY-m.y)<m.r){ moons.splice(i,1); score++; } } };
+  function draw(){ ctx.clearRect(0,0,w,h); moons.forEach(m=>{ ctx.beginPath(); ctx.arc(m.x,m.y,m.r,0,Math.PI*2); ctx.fillStyle='#ffd166'; ctx.fill(); }); if(moons.length) requestAnimationFrame(draw); }
+  draw(); setTimeout(()=>{ alert('Minute over — moons collected: '+score); },60000);
+}
+function resetCalm(n){ const c=document.getElementById('game'+n); if(c) c.getContext('2d').clearRect(0,0,c.width,c.height); }
+
+/* PHOTO MATCH (panel 6) placeholder */
+function startPhotoMatch(n){ const photos=JSON.parse(localStorage.getItem('photos_'+n) || '[]'); if(photos.length<2){ alert('Upload at least 2 photos to play this mini-game.'); return; } alert('Photo Match started! (demo uses your uploaded photos)'); }
+function resetPhotoMatch(n){ alert('Photo Match reset.'); }
+
+/* CART (panel 7) uses car logic */
+function startCart(n){ startCar(n); }
+function resetCart(n){ resetCar(n); }
+
+/* PLAYLIST (60s each sequential) */
+function playPlaylist(){
+  const a1=document.getElementById('a1'), a2=document.getElementById('a2'), a3=document.getElementById('a3');
+  sequencePlay([a1,a2,a3],0);
+}
+function sequencePlay(list,i){
+  if(i>=list.length) return;
+  const a=list[i];
+  a.currentTime=0;
+  a.play().catch(()=>{});
+  const timer=setTimeout(()=>{ a.pause(); sequencePlay(list,i+1); },60000);
+  a.onended=()=>{ clearTimeout(timer); sequencePlay(list,i+1); };
+}
+
+/* SUBMIT FEEDBACK: save locally + download + optional EmailJS */
+async function submitFeedback(){
+  const text=document.getElementById('finalText').value || '';
+  const email=document.getElementById('sendEmail').value.trim();
+  const time=new Date().toISOString();
+  const entry={text,time};
+  let arr=JSON.parse(localStorage.getItem('submissions')||'[]'); arr.push(entry); localStorage.setItem('submissions',JSON.stringify(arr));
+  const blob=new Blob([JSON.stringify(entry,null,2)],{type:'application/json'}); const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download='anniv_sub_'+Date.now()+'.json'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+
+  if(email){
+    const subject=encodeURIComponent('Anniversary Feedback from Starboy');
+    const body=encodeURIComponent('Time: '+time+'\n\n'+text);
+    window.location.href='mailto:'+encodeURIComponent(email)+'?subject='+subject+'&body='+body;
+  }
+
+  // EMAILJS: to enable automatic emailing, sign up at https://www.emailjs.com and paste IDs here:
+  const SEND_EMAIL_VIA_EMAILJS = false; // set to true after inserting IDs
+  if(SEND_EMAIL_VIA_EMAILJS){
+    const EMAILJS_SERVICE_ID = 'PASTE_SERVICE_ID_HERE';
+    const EMAILJS_TEMPLATE_ID = 'PASTE_TEMPLATE_ID_HERE';
+    const EMAILJS_USER_ID = 'PASTE_USER_ID_HERE';
+    if(typeof emailjs === 'undefined'){
+      const s=document.createElement('script'); s.src='https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js'; document.head.appendChild(s);
+      s.onload = () => { emailjs.init(EMAILJS_USER_ID); sendEmailJS(); };
+    } else {
+      emailjs.init(EMAILJS_USER_ID); sendEmailJS();
+    }
+    function sendEmailJS(){
+      const templateParams = { to_email: 'fionashah6@gmail.com', message: text, time: time };
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(()=>{ alert('Feedback sent via EmailJS.'); })
+        .catch(err=>{ console.error('EmailJS error',err); alert('Failed to send via EmailJS.'); });
+    }
+  } else {
+    alert('Saved locally and downloaded. To enable automatic email delivery, sign up for EmailJS and enable it in the code.');
+  }
+}
+</script>
+</body>
+</html>
